@@ -1,2 +1,2 @@
-# ML_Algo_C-
+# ML_Algo_CPP
 Machine learning C++ implementation
