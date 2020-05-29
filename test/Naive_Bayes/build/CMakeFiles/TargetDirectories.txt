@@ -1,0 +1,3 @@
+/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build/CMakeFiles/rebuild_cache.dir
+/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build/CMakeFiles/Naive_Bayes_test.dir
+/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build/CMakeFiles/edit_cache.dir

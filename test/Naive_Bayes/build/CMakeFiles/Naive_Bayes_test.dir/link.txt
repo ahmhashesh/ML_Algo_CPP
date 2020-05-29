@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/Naive_Bayes_test.dir/Naive_Bayes_test.cpp.o  -o Naive_Bayes_test 

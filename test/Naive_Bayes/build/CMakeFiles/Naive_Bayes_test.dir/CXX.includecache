@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/Naive_Bayes_test.cpp
+iostream
+-
+
