@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes"
+CMAKE_SOURCE_DIR = "/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build"
+CMAKE_BINARY_DIR = "/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build/CMakeFiles" "/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/build/CMakeFiles" "/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,33 @@ Naive_Bayes_test.cpp.s:
 	$(MAKE) -f CMakeFiles/Naive_Bayes_test.dir/build.make CMakeFiles/Naive_Bayes_test.dir/Naive_Bayes_test.cpp.s
 .PHONY : Naive_Bayes_test.cpp.s
 
+media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.o: media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.o
+
+.PHONY : media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.o
+
+# target to build an object file
+media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.o:
+	$(MAKE) -f CMakeFiles/Naive_Bayes_test.dir/build.make CMakeFiles/Naive_Bayes_test.dir/media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.o
+.PHONY : media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.o
+
+media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.i: media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.i
+
+.PHONY : media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.i
+
+# target to preprocess a source file
+media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.i:
+	$(MAKE) -f CMakeFiles/Naive_Bayes_test.dir/build.make CMakeFiles/Naive_Bayes_test.dir/media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.i
+.PHONY : media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.i
+
+media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.s: media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.s
+
+.PHONY : media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.s
+
+# target to generate assembly for a file
+media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.s:
+	$(MAKE) -f CMakeFiles/Naive_Bayes_test.dir/build.make CMakeFiles/Naive_Bayes_test.dir/media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.s
+.PHONY : media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... Naive_Bayes_test.o"
 	@echo "... Naive_Bayes_test.i"
 	@echo "... Naive_Bayes_test.s"
+	@echo "... media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.o"
+	@echo "... media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.i"
+	@echo "... media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.s"
 .PHONY : help
 
 

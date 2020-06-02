@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/media/ahmed/My Passport/Repo/ML_Algo_CPP/ML_Algo_C++/test/Naive_Bayes/../../_inc/Naive_Bayes" 
+CXX_INCLUDES = -I"/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/../../_inc/Naive_Bayes" -I"/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/../../datasets/_inc" -I"/media/ahmed/My Passport/Repo/ML_Algo_CPP/test/Naive_Bayes/../../_inc/Math" -I/home/ahmed/python/include/python2.7 -I/home/ahmed/python/lib/python2.7 
 

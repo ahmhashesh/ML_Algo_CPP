@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Naive_Bayes_test.dir/Naive_Bayes_test.cpp.o  -o Naive_Bayes_test 
+/usr/bin/c++    -rdynamic CMakeFiles/Naive_Bayes_test.dir/media/ahmed/My_Passport/Repo/ML_Algo_CPP/_src/Naive_bayes/Naive_Bayes.cpp.o CMakeFiles/Naive_Bayes_test.dir/Naive_Bayes_test.cpp.o  -o Naive_Bayes_test -lpython3.6m 
