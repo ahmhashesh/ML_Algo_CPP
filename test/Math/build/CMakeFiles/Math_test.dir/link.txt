@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Math_test.dir/media/ahmed/My_Passport/Repo/ML_Algo_CPP/ML_Algo_C++/_src/Math/Math.cpp.o CMakeFiles/Math_test.dir/Math_test.cpp.o  -o Math_test 
