@@ -6,6 +6,9 @@ project(ML_Algo_CPP LANGUAGES CXX)
 # Direct the installations to our output folder
 set(CMAKE_INSTALL_PREFIX out/)
 
+## Find libraries
+find_package(PythonLibs 2.7 REQUIRED)
+
 # The compiled library code is here
 add_subdirectory(_src)
 
