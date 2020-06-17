@@ -10,7 +10,7 @@
 
 std::vector<std::vector<float>> Read_Iris_Dataset(void)
 {
-   std::ifstream myfile("iris.data");
+  std::ifstream myfile("iris.data");
   std::string line;
   std::vector<std::vector<float>> Iris_Dataset;
   std::vector<float> temp_sepal_len;
@@ -39,15 +39,15 @@ std::vector<std::vector<float>> Read_Iris_Dataset(void)
          temp_sepal_wid.push_back(sepal_wid_f);
          temp_petal_len.push_back(petal_len_f);
          temp_petal_wid.push_back(petal_wid_f);
-         if(temp_string.compare("Iris_setosa") != 0)
+         if(temp_string.compare("Iris_setosa") == 0)
          {
             iris_class_f = Iris_setosa;
          }
-         else if (temp_string.compare("Iris_versicolor") != 0)
+         else if (temp_string.compare("Iris_versicolor") ==0)
          {
             iris_class_f = Iris_versicolor;
          }
-         else if (temp_string.compare("Iris_virginica") != 0)
+         else if (temp_string.compare("Iris_virginica") == 0)
          {
             iris_class_f = Iris_virginica;
          }else 
@@ -61,27 +61,65 @@ std::vector<std::vector<float>> Read_Iris_Dataset(void)
       Iris_Dataset.push_back(temp_petal_len);
       Iris_Dataset.push_back(temp_petal_wid);
       Iris_Dataset.push_back(temp_iris_class);  
+
   }
   else 
   {
-     std::cout << "Unable to open file";
+     std::cout << "Unable to open file"<<std::endl;;
   }
   return Iris_Dataset;
 }
 
-std::vector<std::vector<float>> separate_by_class(std::vector<std::vector<float>> dataset ,float iris_class )
+std::vector<std::vector<float>> split_by_class( std::vector<std::vector<float>>& dataset ,float data_class )
 {
-   std::vector<std::vector<float>> separated_data;
-   
+   std::vector< std::vector<float> > temp_out;
+   std::vector< std::vector<float> > out_Vector;
+   std::vector<float> temp;
    int counter = 0;
    std::for_each( dataset[4].begin(), dataset[4].end(), [&](float & item_class)
    { 
-      if(item_class == iris_class )
+      if(item_class == data_class )
       {
-
-      }
-      
+         std::vector<float> temp;
+         temp.push_back(dataset[0][counter]);
+         temp.push_back(dataset[1][counter]);
+         temp.push_back(dataset[2][counter]);
+         temp.push_back(dataset[3][counter]);
+         temp.push_back(dataset[4][counter]);
+         temp_out.push_back(temp);
+      }      
       counter++;
    });
+   out_Vector = alg_math::vect_Transpose(temp_out);
+   return out_Vector;
 }
 
+std::vector<std::vector<float>> vector_Train_Split(const std::vector<std::vector<float>> &vect , float percent)
+{
+   std::vector< std::vector<float>> temp_out;
+   std::vector<std::vector<float>> input = vect;
+   int size = vect[0].size() * percent/100;
+   // dealing with data as vectors is easier than separating features in vectors
+   input = alg_math::vect_Transpose(input);
+   for (auto temp =input.begin() ; temp != input.begin()+ size; temp++ )
+   {
+      temp_out.push_back(*temp);
+   }
+   return alg_math::vect_Transpose(temp_out);
+}
+
+
+std::vector<std::vector<float>> vector_Test_Split( std::vector<std::vector<float>> &vect , float percent)
+{
+   std::vector< std::vector<float>> temp_out;
+   std::vector<std::vector<float>> input = vect;
+   int sindex = vect[0].size() * (100 - percent)/100;
+   
+   // dealing with data as vectors is easier than separating features in vectors
+   input = alg_math::vect_Transpose(input);
+   for (auto temp =input.begin()+ sindex ; temp != input.end(); temp++ )
+   {
+      temp_out.push_back(*temp);
+   }
+   return alg_math::vect_Transpose(temp_out);
+}

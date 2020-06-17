@@ -1,6 +1,6 @@
 #ifndef MATH_H
 #define MATH_H
-
+#include <iostream>
 #include <vector>
 #include <cmath>
 #include <numeric>
@@ -13,7 +13,7 @@ namespace alg_math
     double Math_Var (std::vector<M> &);
     double calc_prob(double value,double mean,double stdev);
     template <typename T> 
-    std::vector< std::vector<T>> vect_Transpose (std::vector<std::vector<T>> input_Vector);
+    std::vector< std::vector<T>> vect_Transpose ( std::vector<std::vector<T>> &input_Vector);
 } 
 
 template <typename T> 
@@ -32,14 +32,21 @@ double alg_math::Math_Var (std::vector<M> &Data)
     return stdev;
 }
 template <typename T> 
-std::vector< std::vector<T>> alg_math::vect_Transpose (std::vector<std::vector<T>> input_Vector)
+std::vector< std::vector<T>> alg_math::vect_Transpose ( std::vector<std::vector<T>>& input_Vector)
 {
-   std::vector< std::vector<T> > out_Vector(input_Vector[0].size(), std::vector<T>(input_Vector.size()));
-   for(int i=0;i<input_Vector.size(); i++) {   
-	for (int j=0;j<input_Vector[i].size(); j++){
-	        out_Vector[j][i] = input_Vector [i][j];
+   if(input_Vector.size() > 0)
+   {
+    std::vector< std::vector<T> > out_Vector(input_Vector[0].size(), std::vector<T>(input_Vector.size()));
+
+    for(int i=0;i<input_Vector.size(); i++) {   
+    for (int j=0;j<input_Vector[i].size(); j++){
+    out_Vector[j][i] = input_Vector [i][j];
+            
 	   }
    }
-   return out_Vector;
+    return out_Vector;
+
+   }
+   return input_Vector;
 }
 #endif

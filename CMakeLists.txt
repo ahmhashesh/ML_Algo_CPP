@@ -18,3 +18,4 @@ add_subdirectory(_src)
 # The test code is here
 add_subdirectory(test)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g3 -fPIC")
