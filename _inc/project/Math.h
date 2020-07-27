@@ -4,6 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <numeric>
+#include <algorithm>
 
 namespace alg_math 
 { 
@@ -27,8 +28,17 @@ template <typename M>
 double alg_math::Math_Var (std::vector<M> &Data)
 {
     M mean = std::accumulate(std::begin(Data), std::end(Data), 0.0) / Data.size();
-    double sq_sum = std::inner_product(Data.begin(), Data.end(), Data.begin(), 0.0);
-    double stdev = std::sqrt(sq_sum / Data.size() - (double)(mean * mean));
+    //double sq_sum = std::inner_product(Data.begin(), Data.end(), Data.begin(), 0.0);
+    //double stdev = std::sqrt((sq_sum  - (double)(mean * mean))/ Data.size());
+    double accum = 0.0;
+    std::for_each (std::begin(Data), std::end(Data), [&](const double d) {
+    accum += (d - mean) * (d - mean);
+    });
+
+double stdev = sqrt(accum / (Data.size()-1));
+    
+    
+    
     return stdev;
 }
 template <typename T> 

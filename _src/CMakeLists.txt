@@ -1,5 +1,6 @@
 add_library(preprocessing STATIC
     "preprocessing.cpp"
+    "Naive_Bayes.cpp"
     "Math.cpp"
 )
 target_compile_features(preprocessing PUBLIC cxx_std_11)

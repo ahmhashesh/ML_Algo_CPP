@@ -123,3 +123,18 @@ std::vector<std::vector<float>> vector_Test_Split( std::vector<std::vector<float
    }
    return alg_math::vect_Transpose(temp_out);
 }
+
+float Vect_match_Score (const std::vector<float> &labels, const std::vector<float> &predictions )
+{
+    float result=0; 
+    int index=0;
+    std::for_each(labels.begin(), labels.end(), [&](float label)
+    { 
+        if(label == predictions[index])
+        {
+            result++;
+        }
+        index++; 
+    });
+    return float(100*result/labels.size());
+}
