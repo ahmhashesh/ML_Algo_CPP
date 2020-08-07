@@ -15,6 +15,8 @@ namespace alg_math
     double calc_prob(double value,double mean,double stdev);
     template <typename T> 
     std::vector< std::vector<T>> vect_Transpose ( std::vector<std::vector<T>> &input_Vector);
+    template <typename T> 
+    std::vector< T> vect_Multiply ( std::vector<T>& input_Vector1, std::vector<T>& input_Vector2);
 } 
 
 template <typename T> 
@@ -58,5 +60,19 @@ std::vector< std::vector<T>> alg_math::vect_Transpose ( std::vector<std::vector<
 
    }
    return input_Vector;
+}
+template <typename T> 
+std::vector<T> alg_math::vect_Multiply ( std::vector<T>& input_Vector1, std::vector<T>& input_Vector2)
+{
+   if(input_Vector1.size() == input_Vector2.size() && input_Vector1.size() !=0 )
+   {
+    std::vector< T > out_Vector(input_Vector1.size());
+
+    for(int i=0;i<input_Vector1.size(); i++) { 
+        out_Vector[i] = input_Vector1 [i] * input_Vector2 [i] ;
+	   }
+       return out_Vector;
+   }
+   return input_Vector1;
 }
 #endif

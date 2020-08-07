@@ -8,7 +8,7 @@ add_executable(math_test
 target_compile_features(math_test PUBLIC cxx_std_11)
 
 target_include_directories(math_test PRIVATE
-    "../../_inc/project/"
+    "../_inc/project/"
 )
 
 target_link_libraries(math_test preprocessing)
@@ -23,7 +23,7 @@ add_executable(naive_bayes_test
 target_compile_features(naive_bayes_test PUBLIC cxx_std_11)
 
 target_include_directories(naive_bayes_test PRIVATE
-"../../_inc/project/"
+"../_inc/project/"
 )
 
 target_link_libraries(naive_bayes_test preprocessing)
@@ -39,7 +39,7 @@ add_executable(preprocessing_test
 target_compile_features(preprocessing_test PUBLIC cxx_std_11)
 
 target_include_directories(preprocessing_test PRIVATE
-    PRIVATE "../../_inc/project/"
+    PRIVATE "../_inc/project/"
     PRIVATE ${PYTHON_INCLUDE_DIRS}
 )
 target_link_libraries(preprocessing_test 
@@ -48,3 +48,20 @@ target_link_libraries(preprocessing_test
 )
 
 install(TARGETS preprocessing_test DESTINATION bin)
+
+###############################################################################
+#### Linear_Regression_test ####
+add_executable(Linear_Regression_test
+    "Linear_Regression_test.cpp"
+)
+target_compile_features(Linear_Regression_test PUBLIC cxx_std_11)
+
+target_include_directories(Linear_Regression_test PRIVATE
+PRIVATE    "../_inc/project/" 
+PRIVATE ${PYTHON_INCLUDE_DIRS}
+)
+
+target_link_libraries(Linear_Regression_test
+    ${PYTHON_LIBRARIES})
+
+install(TARGETS Linear_Regression_test DESTINATION bin)
